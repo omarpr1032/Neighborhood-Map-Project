@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="EN">
+<head>
+	<title>Omar Pinero - Neighborhood Map Project</title>
+
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- Custom CSS-->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="container-fluid dark">
+		<div class="sidebar" id="sidebar">
+			<div class="sidebarHeader">           
+				<h4>Cayey P.R. Locations</h4>
+			</div>
+			<div class="form-group">
+				<label for="inputSearch">Search:</label>
+				<input class="form-control"  id="inputSearch" data-bind="textInput: filter" placeholder="Enter a Location Name">          
+				<hr>
+				<div id ="locationsList">
+					<ul class="list-group" data-bind="foreach: filteredLocations">                  
+						<li class="list-group-item list-group-item-custom pointer" data-bind="text: title, click:$parent.showInfoWindow"></li>
+					</ul>           
+				</div>
+			</div>
+		</div>
+		<div class="main">
+			<div class="navbar">
+				<a class="pointer" onclick="ToggleSidebar()">☰</a> 
+			</div>
+			<div id="map"></div>
+		</div>
+	</div>
+
+	<!-- Locations -->
+	<script src="js/locations.js"></script>
+	<!-- knockout -->
+	<script src="js/knockout-3.4.2.js"></script>
+	<!-- App -->
+	<script src="js/app.js"></script>
+	<!-- jQuery -->
+	<script src="js/jquery-3.3.1.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Google Maps API -->
+	<script async defer src="https://maps.googleapis.com/maps/api/js?libraries=geometry,drawing&key=AIzaSyDK9mdn-kE1S5XZW-HvfnZEyn9w3r_P6yM&v=3&callback=startApp"></script>
+</body>
+</html>
