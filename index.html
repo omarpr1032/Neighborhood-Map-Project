@@ -33,6 +33,7 @@
 		<div class="main">
 			<div class="navbar">
 				<a class="pointer" onclick="ToggleSidebar()">☰</a> 
+				<div id="poweredBy"><img src="img/Powered.png" height="30px" alt="Powered by Foursquare"></div>
 			</div>
 			<div id="map"></div>
 		</div>
@@ -49,6 +50,8 @@
 	<!-- Bootstrap -->
 	<script src="js/bootstrap.min.js"></script>
 	<!-- Google Maps API -->
-	<script async defer src="https://maps.googleapis.com/maps/api/js?libraries=geometry,drawing&key=AIzaSyDK9mdn-kE1S5XZW-HvfnZEyn9w3r_P6yM&v=3&callback=startApp"></script>
+	<script async defer 
+			src="https://maps.googleapis.com/maps/api/js?libraries=geometry,drawing&key=AIzaSyDK9mdn-kE1S5XZW-HvfnZEyn9w3r_P6yM&v=3&callback=startApp" 
+			onerror="showError()"></script>
 </body>
 </html>

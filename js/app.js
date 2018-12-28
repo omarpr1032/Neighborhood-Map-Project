@@ -1,7 +1,7 @@
 // Global Variables
 var sidebarCollapsed = false;
-var foursquareClientID = "EJUVUP3N1RXOYF33BRRLUSA0W5EDY5ZQWOLOAJWIALKOZKJF";
-var foursquareClientSecret = "XQRIRGFFFM22ACACPMTL2HDYHCZXUJ4SNY5KPLOOSFQPR5TL";
+const foursquareClientID = "EJUVUP3N1RXOYF33BRRLUSA0W5EDY5ZQWOLOAJWIALKOZKJF";
+const foursquareClientSecret = "XQRIRGFFFM22ACACPMTL2HDYHCZXUJ4SNY5KPLOOSFQPR5TL";
 var map;
 
 
@@ -105,6 +105,12 @@ var AppViewModel = function (){
 		// Return the markers locations array
 		return result;
 	});
+};
+
+showError = function showError() {
+    alert(
+        'Google Maps did not load. Please verify your network connection and try again!'
+    );
 };
 
 // Use knockout JS
